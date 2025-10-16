@@ -33,6 +33,12 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 Use Task tool with code-reviewer type, fill template at `code-reviewer.md`
 
+The code-reviewer subagent will automatically:
+1. Run Code Rabbit CLI for automated review (`coderabbit review --plain --base-commit {BASE_SHA}`)
+2. Analyze Code Rabbit findings
+3. Perform manual code review
+4. Synthesize both sources into comprehensive feedback
+
 **Placeholders:**
 - `{WHAT_WAS_IMPLEMENTED}` - What you just built
 - `{PLAN_OR_REQUIREMENTS}` - What it should do
@@ -64,11 +70,13 @@ HEAD_SHA=$(git rev-parse HEAD)
   DESCRIPTION: Added verifyIndex() and repairIndex() with 4 issue types
 
 [Subagent returns]:
-  Strengths: Clean architecture, real tests
+  Code Rabbit Findings: 3 issues found - 1 important, 2 minor
+  Strengths: Clean architecture, real tests, good error handling
   Issues:
-    Important: Missing progress indicators
-    Minor: Magic number (100) for reporting interval
-  Assessment: Ready to proceed
+    Important: Missing progress indicators (Manual + Code Rabbit)
+    Important: Unhandled promise rejection in repair loop (Code Rabbit)
+    Minor: Magic number (100) for reporting interval (Manual)
+  Assessment: Ready to proceed with fixes
 
 You: [Fix progress indicators]
 [Continue to Task 3]
