@@ -25,7 +25,7 @@ Read the introduction: [Superpowers for Claude Code](https://blog.fsck.com/2025/
 
 ```bash
 # In Claude Code
-/plugin marketplace add obra/superpowers-marketplace
+/plugin marketplace add dreamiurg/superpowers-marketplace
 /plugin install superpowers@superpowers-marketplace
 ```
 
@@ -148,5 +148,5 @@ MIT License - see LICENSE file for details
 
 ## Support
 
-- **Issues**: https://github.com/obra/superpowers/issues
-- **Marketplace**: https://github.com/obra/superpowers-marketplace
+- **Issues**: https://github.com/dreamiurg/superpowers/issues
+- **Marketplace**: https://github.com/dreamiurg/superpowers-marketplace
